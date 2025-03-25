@@ -1,4 +1,4 @@
-/** public class FourMain {
+public class FourMain {
     public static void main(String[] args) {
         String s = "Добро пожаловать на курс по Java";
         String[] array = s.split(" ");
@@ -8,4 +8,3 @@
 
         }
 }
-*/

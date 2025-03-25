@@ -1,4 +1,4 @@
-/** import java.time.LocalDateTime;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class TwoMain {
@@ -24,7 +24,6 @@ public class TwoMain {
             temp = "Доброй ночи";
         }
 
-        System.out.println(temp + "," + s);
+        System.out.println(temp + " , " + s);
     } 
 }
-*/

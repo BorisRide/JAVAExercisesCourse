@@ -1,7 +1,7 @@
 
-/**import java.util.Scanner;
+import java.util.Scanner;
 
-public class Main {
+public class OneMain {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -10,4 +10,3 @@ public class Main {
         System.out.printf(out,s);
     } 
 }
-*/
