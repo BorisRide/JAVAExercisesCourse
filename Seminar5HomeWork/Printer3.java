@@ -56,8 +56,8 @@ class ShoppingBasket {
     //Если продукт отсутствует, обновление не произойдет, поэтому сначала проверьте наличие продукта с помощью метода containsKey.
         if (basket.containsKey(product)) {
             basket.put(product, quantity);
-            }
         }
+    }
     
     //Проверяет, есть ли продукт в корзине и возвращает его количество. Если продукта нет, возвращает 0
     public int checkProduct(String product) {
@@ -73,8 +73,9 @@ class ShoppingBasket {
         if (basket.isEmpty()) {
             System.out.println("Basket is empty.");
         } else {
-        for (HashMap.Entry<String, Integer> entry : basket.entrySet()) {
-            System.out.println(entry.getKey() + " - " + entry.getValue());
+            for (HashMap.Entry<String, Integer> entry : basket.entrySet()) {
+                System.out.println(entry.getKey() + " - " + entry.getValue());
+            }
         }
     }
 }
