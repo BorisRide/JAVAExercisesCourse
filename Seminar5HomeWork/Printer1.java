@@ -28,13 +28,13 @@ import java.util.HashMap;
 class StudentDirectory {
     private HashMap<String, ArrayList<Integer>> studentMap = new HashMap<>();
 
-    // Добавляет или обновляет запись о студенте
+    // Добавляет или обновляет запись о студенте с именем name и оценкой grade.
     public void addStudent(String name, Integer grade) {
         // Напишите свое решение ниже
 
-            //Для добавления или обновления записи о студенте используем метод computeIfAbsent из HashMap. 
-            //Этот метод позволяет вам создать новую запись в словарь, если ключ еще не существует, 
-            //и затем добавить оценку в список оценок студента.
+        //Для добавления или обновления записи о студенте используем метод computeIfAbsent из HashMap. 
+        //Этот метод позволяет добавить даннные по ключу или создать новую запись в словарь, если ключ еще не существует, 
+        //а затем добавить оценку в список оценок студента.
         studentMap.computeIfAbsent(name, k -> new ArrayList<>()).add(grade);
             
             //Поскольку вы не можете изменять LinkedList прямо в цикле, создайте временный список, 
@@ -45,7 +45,7 @@ class StudentDirectory {
     public ArrayList<Integer> findStudent(String name) {
         // Напишите свое решение ниже
 
-        //Чтобы найти оценки студента по имени, используйте метод getOrDefault из HashMap
+        //Чтобы найти оценки студента по имени, используtем метод getOrDefault из HashMap
         //Этот метод вернет список оценок для указанного студента, если он существует
         //или пустой список, если студента нет в справочнике.
         return studentMap.getOrDefault(name, new ArrayList<>());
