@@ -23,27 +23,74 @@
 
 package Sertificationcourse;
 
+import java.awt.Color;
 import java.util.Map;
+import java.util.Objects;
 
 public class Laptop {
-    public static void main(String[] args) {
-    
-        //Каждый ноутбук имеет определенные характеристики. 
-        //Определяем, какие поля нужны для хранения информации о ноутбуке. 
-        //Понадобиться поля для объема оперативной памяти, жесткого диска, операционной системы и цвета и ещё нескольких.
+   //Каждый ноутбук имеет определенные характеристики. 
+    //Определяем, какие поля нужны для хранения информации о ноутбуке. 
+    //Понадобиться поля для объема оперативной памяти, жесткого диска, операционной системы и цвета и ещё нескольких.
 
-        String name = new String(); // марка
-        String firm = new String(); // фирма-изготовитель
-        int ram; // ram = ОЗУ
-        int hardDrive; // hardDrive = жесткий диск, объём диска
-        String oS = new String(); // oS = операционная система, тип
-        String color = new String(); // color = цвет
+    // private String name = new String(); // марка //УБРАТЬ/ОСТАВИТЬ ПОСЛЕ ТЕСТИРОВАНИЯ
+    // private String firm = new String(); // фирма-изготовитель ////УБРАТЬ/ОСТАВИТЬ ПОСЛЕ ТЕСТИРОВАНИЯ
+    private int ram; // ram = ОЗУ, размер в Гб
+    private int hardDrive; // hardDrive = жесткий диск, объём диска в Гб
+    private String oS = new String(); // oS = операционная система, тип
+    //УБРАТЬ ПОСЛЕ ТЕСТИРОВАНИЯ private String oS;
+    private String color = new String(); // color = цвет
+    //УБРАТЬ ПОСЛЕ ТЕСТИРОВАНИЯ rivate String color;     
+
+    public Laptop(int ram, int hardDrive, String oS, String color) {
+        this.ram = ram;
+        this.hardDrive = hardDrive;
+        this.oS = oS;
+        this.color = color;
+
     }
 
     //Создадим конструктор для инициализации полей и методы для получения значений этих полей.
     //С его помощью будем создавать и управлять объектами класса Laptop.
 
-    private choise(Map args) {
+    public int getRam() {
+        return ram;
+    }
+
+    public int getHdd() {
+        return hardDrive;
+    }
+
+    public String getOs() {
+        return oS;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    @Override
+    public String toString() {
+        return "module6.Laptop{" + 
+        "RAM=" + ram + " GB" + 
+        ", HDD=" + hardDrive + " GB" + 
+        ", OS=" + oS + '\'' + 
+        ", Color=" + color + '\'' + '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Laptop laptop = (Laptop) o;
+        return ram == laptop.ram && hardDrive == laptop.hardDrive && oS.equals(laptop.oS) && color.equals(laptop.color);
+    }
+    @Override
+    public int hashCode() {
+    return Objects.hash(ram, hardDrive, oS, color);
+    }
+}
+
+   
         
         // Создадим меню, позволяющее пользователю выбирать критерии фильтрации. 
         // Используем Scanner для ввода данных от пользователя.
