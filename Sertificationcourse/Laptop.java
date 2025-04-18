@@ -23,8 +23,6 @@
 
 package Sertificationcourse;
 
-import java.awt.Color;
-import java.util.Map;
 import java.util.Objects;
 
 public class Laptop {
@@ -90,7 +88,6 @@ public class Laptop {
     }
 }
 
-   
         
         // Создадим меню, позволяющее пользователю выбирать критерии фильтрации. 
         // Используем Scanner для ввода данных от пользователя.
@@ -104,7 +101,3 @@ public class Laptop {
         //После каждого выбора критерия спросим у пользователя, хочет ли он добавить еще один критерий. 
         //Используем цикл while для продолжения запроса до тех пор, пока пользователь не закончит ввод.
         
-    }
-
-    
-}
