@@ -39,16 +39,15 @@ public class Laptop {
     private String color = new String(); // color = цвет
     //УБРАТЬ ПОСЛЕ ТЕСТИРОВАНИЯ rivate String color;     
 
+    //Создадим конструктор для инициализации полей и методы для получения значений этих полей.
+    //С его помощью будем создавать и управлять объектами класса Laptop.
+
     public Laptop(int ram, int hardDrive, String oS, String color) {
         this.ram = ram;
         this.hardDrive = hardDrive;
         this.oS = oS;
         this.color = color;
-
     }
-
-    //Создадим конструктор для инициализации полей и методы для получения значений этих полей.
-    //С его помощью будем создавать и управлять объектами класса Laptop.
 
     public int getRam() {
         return ram;
@@ -68,7 +67,7 @@ public class Laptop {
 
     @Override
     public String toString() {
-        return "module6.Laptop{" + 
+        return "module: Laptop{" + 
         "RAM=" + ram + " GB" + 
         ", HDD=" + hardDrive + " GB" + 
         ", OS=" + oS + '\'' + 
@@ -84,20 +83,6 @@ public class Laptop {
     }
     @Override
     public int hashCode() {
-    return Objects.hash(ram, hardDrive, oS, color);
+        return Objects.hash(ram, hardDrive, oS, color);
     }
 }
-
-        
-        // Создадим меню, позволяющее пользователю выбирать критерии фильтрации. 
-        // Используем Scanner для ввода данных от пользователя.
-        
-        // Используем Map для хранения выбранных пользователем критериев фильтрации и их значений. 
-        // Это облегчит работу с фильтрами при отборе ноутбуков.
-
-        //Создадим метод для фильтрации ноутбуков. В этом методе будем проверять, 
-        //соответствуют ли ноутбуки критериям фильтрации, и выводите те, которые проходят отбор.
-
-        //После каждого выбора критерия спросим у пользователя, хочет ли он добавить еще один критерий. 
-        //Используем цикл while для продолжения запроса до тех пор, пока пользователь не закончит ввод.
-        
