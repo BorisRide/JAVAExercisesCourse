@@ -13,6 +13,7 @@ public class LaptopStore {
         laptops.add(new Laptop(16, 1024, "Windows 11", "Silver"));
         laptops.add(new Laptop(8, 256, "Ubuntu", "Black"));
         laptops.add(new Laptop(32, 1024, "macOS", "Gray"));
+        laptops.add(new Laptop(64, 2048, "Windows 11", "Red"));
         laptops.add(new Laptop(16, 512, "Windows 10", "White"));
         
         // Создадим меню, позволяющее пользователю выбирать критерии фильтрации. 
@@ -29,8 +30,8 @@ public class LaptopStore {
         
         Scanner scanner = new Scanner(System.in);
         Map<String, Object> filters = new HashMap<>();
-        boolean continueFiltering = true;
         //Используем цикл while для продолжения запроса до тех пор, пока пользователь не закончит ввод.
+        boolean continueFiltering = true;
         while (continueFiltering) {
             System.out.println("Введите цифру, соответствующую необходимому критерию:");
             for (Map.Entry<Integer, String> entry : criteria.entrySet()) {
@@ -62,9 +63,10 @@ public class LaptopStore {
             }
 
             //После каждого выбора критерия спросим у пользователя, хочет ли он добавить еще один критерий. 
-            System.out.print("Хотите добавить еще один критерий? (да/нет): ");
+            System.out.print("Хотите добавить еще один критерий? (yes/no): ");
             String response = scanner.nextLine();
-            continueFiltering = response.equalsIgnoreCase("да");
+            //проверка правильности ввода System.out.println(response);
+            continueFiltering = response.equalsIgnoreCase("yes");
         }
 
         filterLaptops(laptops, filters);

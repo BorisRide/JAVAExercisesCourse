@@ -30,15 +30,12 @@ public class Laptop {
     //Определяем, какие поля нужны для хранения информации о ноутбуке. 
     //Понадобиться поля для объема оперативной памяти, жесткого диска, операционной системы и цвета и ещё нескольких.
 
-    // private String name = new String(); // марка //УБРАТЬ/ОСТАВИТЬ ПОСЛЕ ТЕСТИРОВАНИЯ
     // private String firm = new String(); // фирма-изготовитель ////УБРАТЬ/ОСТАВИТЬ ПОСЛЕ ТЕСТИРОВАНИЯ
     private int ram; // ram = ОЗУ, размер в Гб
     private int hardDrive; // hardDrive = жесткий диск, объём диска в Гб
     private String oS = new String(); // oS = операционная система, тип
-    //УБРАТЬ ПОСЛЕ ТЕСТИРОВАНИЯ private String oS;
     private String color = new String(); // color = цвет
-    //УБРАТЬ ПОСЛЕ ТЕСТИРОВАНИЯ rivate String color;     
-
+    
     //Создадим конструктор для инициализации полей и методы для получения значений этих полей.
     //С его помощью будем создавать и управлять объектами класса Laptop.
 
@@ -67,10 +64,7 @@ public class Laptop {
 
     @Override
     public String toString() {
-        return "module: Laptop{" + 
-        "RAM=" + ram + " GB" + 
-        ", HDD=" + hardDrive + " GB" + 
-        ", OS=" + oS + '\'' + 
+        return "module: Laptop{" + "RAM=" + ram + " GB" + ", HDD=" + hardDrive + " GB" + ", OS=" + oS + '\'' + 
         ", Color=" + color + '\'' + '}';
     }
 
